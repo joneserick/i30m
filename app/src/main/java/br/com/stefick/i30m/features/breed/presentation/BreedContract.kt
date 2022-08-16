@@ -8,6 +8,8 @@ interface BreedContract {
         fun displayLoading()
         fun dismissLoading()
         fun displayError(stringRest: Int)
+        fun displayBreed(breed: BreedResponse)
+
     }
 
     interface Presenter {

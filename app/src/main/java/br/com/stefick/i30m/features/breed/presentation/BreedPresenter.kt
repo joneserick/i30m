@@ -40,12 +40,26 @@ class BreedPresenter(
     }
 
     override fun getSingleBreed(breedId: Int) {
-        TODO("Not yet implemented")
+        coroutineScope.launch {
+            repository.getBreed(breedId)
+                .onStart { view.displayLoading() }
+                .onCompletion { view.dismissLoading() }
+                .catch { error ->
+                    error.printStackTrace()
+                    when (error) {
+                        is NetworkErrorException -> view.displayError(R.string.network_error_msg)
+                        is TimeoutException -> view.displayError(R.string.timeout_error_msg)
+                        else -> view.displayError(R.string.generic_error_message)
+                    }
+                }
+                .collect { breeds ->
+                    view.displayBreed(breeds)
+                }
+        }
     }
 
 
     override fun onDestroy() {
-        TODO("Not yet implemented")
     }
 
 }

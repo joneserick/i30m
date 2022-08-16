@@ -10,18 +10,16 @@ class BreedRepository(private val remoteDataSource: BreedRemoteDataSource) : IBr
 
     override suspend fun getBreeds(limit: Int, page: Int): Flow<ArrayList<BreedResponse>> {
         return withContext(Dispatchers.IO) {
-            val response = remoteDataSource.getBreeds(limit, page)
             flow {
-                emit(response)
+                emit(remoteDataSource.getBreeds(limit, page))
             }
         }
     }
 
     override suspend fun getBreed(breedId: Int): Flow<BreedResponse> {
         return withContext(Dispatchers.IO) {
-            val response = remoteDataSource.getBreed(breedId)
             flow {
-                emit(response)
+                emit(remoteDataSource.getBreed(breedId))
             }
         }
     }

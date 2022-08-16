@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "i30m"
 include ':app'
-include ':app:core'
