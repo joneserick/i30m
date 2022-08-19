@@ -18,4 +18,5 @@
     <string name="timeout_error_msg">Erro ao carregar dados, comunicaçao lenta.</string>
     <string name="generic_error_message">Erro genérico, por favor checar o log</string>
     <string name="str_breeds">Get Breeds</string>
+    <string name="open_cat_image">Abrir imagem</string>
 </resources>
