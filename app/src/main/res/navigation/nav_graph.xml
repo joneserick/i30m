@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/CatListFragment"
         android:name="br.com.stefick.i30m.features.images.presentation.CatListFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_breed" />
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_cat_list" />
 </navigation>

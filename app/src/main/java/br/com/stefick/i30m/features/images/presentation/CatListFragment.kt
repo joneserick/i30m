@@ -27,9 +27,6 @@ class CatListFragment : Fragment(), CatImagesContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mPresenter = CatImagesPresenter(this, ImageRepository(ImageRemoteService()), lifecycleScope)
-        mBinding.btRequestCats.setOnClickListener {
-            mPresenter.loadCatImages()
-        }
     }
 
     companion object {
@@ -50,10 +47,8 @@ class CatListFragment : Fragment(), CatImagesContract.View {
     }
 
     override fun showLoading() {
-        mBinding.loading.visibility = View.VISIBLE
     }
 
     override fun dismissLoading() {
-        mBinding.loading.visibility = View.GONE
     }
 }
