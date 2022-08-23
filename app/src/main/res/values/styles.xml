@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedBadge" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/whiteTeeth</item>
+        <item name="background">@drawable/bg_rounded_solid_color_14dp</item>
+    </style>
+
+</resources>

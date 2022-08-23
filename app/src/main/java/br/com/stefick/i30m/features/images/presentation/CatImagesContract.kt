@@ -5,7 +5,7 @@ import br.com.stefick.i30m.features.images.models.ImagesResponse
 
 interface CatImagesContract {
     interface View {
-        fun displayCats(images: ArrayList<ImagesResponse>)
+        fun displayCats(cats: List<Cat>)
         fun goToCatDetails()
         fun displayError(error: Throwable)
         fun showLoading()
@@ -13,7 +13,7 @@ interface CatImagesContract {
     }
 
     interface Presenter {
-        fun loadCatImages()
+        fun loadCatImages(limit: Int, hasBreeds: Int)
         fun getCatDetail(imageId: String)
     }
 }

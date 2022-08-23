@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface IImageRepository {
 
-    suspend fun getCatImages(): Flow<ArrayList<ImagesResponse>>
+    suspend fun getCatImages(limit: Int, hasBreeds: Int): Flow<ArrayList<ImagesResponse>>
 
     suspend fun getCatImageById(@Path("image_id") imageId: String): Flow<Cat>
 

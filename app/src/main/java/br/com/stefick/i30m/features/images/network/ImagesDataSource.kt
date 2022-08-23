@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface ImagesDataSource {
 
-    suspend fun getCatImages(): ArrayList<ImagesResponse>
+    suspend fun getCatImages(limit: Int, hasBreeds: Int): ArrayList<ImagesResponse>
 
     suspend fun getCatImageById(@Path("image_id") imageId: String): Cat
 

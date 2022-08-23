@@ -7,9 +7,9 @@ import kotlinx.coroutines.flow.flow
 
 class ImageRepository(private val remoteDataSource: ImagesDataSource) : IImageRepository {
 
-    override suspend fun getCatImages(): Flow<ArrayList<ImagesResponse>> {
+    override suspend fun getCatImages(limit: Int, hasBreeds: Int): Flow<ArrayList<ImagesResponse>> {
         return flow {
-            emit(remoteDataSource.getCatImages())
+            emit(remoteDataSource.getCatImages(limit, hasBreeds))
         }
     }
 
