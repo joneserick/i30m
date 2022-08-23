@@ -19,4 +19,5 @@
     <string name="generic_error_message">Erro genérico, por favor checar o log</string>
     <string name="str_breeds">Get Breeds</string>
     <string name="open_cat_image">Abrir imagem</string>
+    <string name="srd">SRD</string>
 </resources>

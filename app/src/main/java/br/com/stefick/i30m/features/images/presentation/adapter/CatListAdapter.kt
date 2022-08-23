@@ -45,11 +45,11 @@ class CatListAdapter(private val context: Context) :
                 .centerCrop()
                 .placeholder(R.drawable.loading_animation)
                 .into(binding.catImage)
-            if (cat.breeds?.isEmpty() != false) {
-                binding.categoryLabel.text =
-                    cat.breeds?.first { it.name.isNotBlank() }?.name.toString()
+            cat.breeds?.let {
+                binding.breedAbreviation.text = if(it.isNotEmpty()) it.first().id else itemView.context.getString(R.string.srd)
+                binding.breedName.text = if(it.isNotEmpty()) it.first().name else itemView.context.getString(R.string.srd)
             }
-            binding.breedName.text = cat.id
+
         }
     }
 

@@ -9,7 +9,10 @@ import retrofit2.http.Query
 interface ImagesApi {
 
     @GET("images/search")
-    suspend fun getCatImages(@Query("limit") limit: Int, @Query("has_breeds") hasBreeds: Int): ArrayList<ImagesResponse>
+    suspend fun getCatImages(
+        @Query("limit") limit: Int,
+        @Query("has_breeds") hasBreeds: Int
+    ): ArrayList<ImagesResponse>
 
     @GET("images/{image_id}")
     suspend fun getCatImageById(@Path("image_id") imageId: String): Cat
