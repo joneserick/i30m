@@ -11,6 +11,8 @@
 
     <color name="whiteTeeth">#FFFFFF</color>
     <color name="freshOrangeJuice">#C58E3D</color>
+    <color name="someDeliciousFruit">#AD6149</color>
+    <color name="salty">#98805D</color>
     <color name="adamantium">#BDBDBD</color>
 
 </resources>

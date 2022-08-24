@@ -1,5 +1,6 @@
 package br.com.stefick.i30m.features.breed.network
 
+import br.com.stefick.i30m.features.breed.models.BreedDetails
 import br.com.stefick.i30m.features.breed.models.BreedResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -16,7 +17,7 @@ class BreedRepository(private val remoteDataSource: BreedRemoteDataSource) : IBr
         }
     }
 
-    override suspend fun getBreed(breedId: Int): Flow<BreedResponse> {
+    override suspend fun getBreed(breedId: Int): Flow<BreedDetails> {
         return withContext(Dispatchers.IO) {
             flow {
                 emit(remoteDataSource.getBreed(breedId))

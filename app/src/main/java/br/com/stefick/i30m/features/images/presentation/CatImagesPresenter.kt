@@ -1,6 +1,7 @@
 package br.com.stefick.i30m.features.images.presentation
 
 import br.com.stefick.i30m.features.breed.models.Breed
+import br.com.stefick.i30m.features.images.details.presentation.CatItemClickListener
 import br.com.stefick.i30m.features.images.models.Cat
 import br.com.stefick.i30m.features.images.network.IImageRepository
 import com.google.gson.annotations.SerializedName
@@ -17,7 +18,7 @@ class CatImagesPresenter(
     private val view: CatImagesContract.View,
     private val repository: IImageRepository,
     private val coroutineScope: CoroutineScope
-) : CatImagesContract.Presenter {
+) : CatImagesContract.Presenter, CatItemClickListener {
 
     override fun loadCatImages(limit: Int, hasBreeds: Int) {
         coroutineScope.launch {
@@ -52,6 +53,10 @@ class CatImagesPresenter(
 //                    view.displayCatDetails(response)
                 }
         }
+    }
+
+    override fun onCatItemClick(cat: Cat) {
+        view.goToCatDetails(cat.id)
     }
 
 }

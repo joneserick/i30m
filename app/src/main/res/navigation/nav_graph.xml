@@ -9,5 +9,19 @@
         android:id="@+id/CatListFragment"
         android:name="br.com.stefick.i30m.features.images.presentation.CatListFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_cat_list" />
+        tools:layout="@layout/fragment_cat_list">
+        <action
+            android:id="@+id/action_CatListFragment_to_CatDetailsFragment"
+            app:destination="@id/CatDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CatDetailsFragment"
+        android:name="br.com.stefick.i30m.features.images.details.presentation.CatDetailsFragment"
+        android:label="@string/app_name"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@android:anim/slide_in_left"
+        app:popExitAnim="@android:anim/slide_out_right"
+        tools:layout="@layout/fragment_cat_details" />
 </navigation>

@@ -1,5 +1,6 @@
 package br.com.stefick.i30m.features.breed.presentation
 
+import br.com.stefick.i30m.features.breed.models.BreedDetails
 import br.com.stefick.i30m.features.breed.models.BreedResponse
 
 interface BreedContract {
@@ -8,7 +9,7 @@ interface BreedContract {
         fun displayLoading()
         fun dismissLoading()
         fun displayError(stringRest: Int)
-        fun displayBreed(breed: BreedResponse)
+        fun displayBreed(breed: BreedDetails)
 
     }
 

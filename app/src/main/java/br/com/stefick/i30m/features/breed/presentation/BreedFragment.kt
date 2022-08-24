@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import br.com.stefick.i30m.databinding.FragmentBreedBinding
+import br.com.stefick.i30m.features.breed.models.BreedDetails
 import br.com.stefick.i30m.features.breed.models.BreedResponse
 import br.com.stefick.i30m.features.breed.network.BreedRepository
 import br.com.stefick.i30m.features.breed.network.Service
@@ -68,7 +69,7 @@ class BreedFragment : Fragment(), BreedContract.View {
         ).show()
     }
 
-    override fun displayBreed(breed: BreedResponse) {
+    override fun displayBreed(breed: BreedDetails) {
         TODO("Not yet implemented")
     }
 }
