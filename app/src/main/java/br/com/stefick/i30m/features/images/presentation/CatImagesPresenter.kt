@@ -1,17 +1,12 @@
 package br.com.stefick.i30m.features.images.presentation
 
-import br.com.stefick.i30m.features.breed.models.Breed
 import br.com.stefick.i30m.features.images.models.Cat
 import br.com.stefick.i30m.features.images.network.IImageRepository
-import com.google.gson.annotations.SerializedName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
-import java.util.*
-import kotlin.collections.ArrayList
 
 class CatImagesPresenter(
     private val view: CatImagesContract.View,

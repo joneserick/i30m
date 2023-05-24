@@ -1,12 +1,9 @@
 package br.com.stefick.i30m.features.breed.presentation
 
 import android.accounts.NetworkErrorException
-import androidx.lifecycle.LifecycleCoroutineScope
 import br.com.stefick.i30m.R
-import br.com.stefick.i30m.features.breed.network.BreedRepository
 import br.com.stefick.i30m.features.breed.network.IBreedRepository
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
